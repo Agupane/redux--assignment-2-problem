@@ -9,11 +9,11 @@ class Persons extends Component {
         persons: []
     };
 
-    personAddedHandler = () => {
+    personAddedHandler = (name, age) => {
         const newPerson = {
             id: Math.random(), // not really unique but good enough here!
-            name: 'Max',
-            age: Math.floor( Math.random() * 40 )
+            name: name,
+            age: age
         };
         console.log("Adding new person: ", newPerson);
         this.props.personAdded(newPerson);
