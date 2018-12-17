@@ -9,7 +9,13 @@ const reducer = (state = initialState,action) =>{
         case actionTypes.ADD_PERSON:{
             return {
                 ...state,
-                persons: state.persons.concat({id: new Date(), value: action.person})
+                persons: state.persons.concat({id: action.person.id, name: action.person.name, age: action.person.age})
+            }
+        }
+        case actionTypes.DELETE_PERSON:{
+            return {
+                ...state,
+                persons: state.persons.filter(person => person.id !== action.personId)
             }
         }
         default:{

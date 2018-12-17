@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './AddPerson.css';
 
 const addPerson = (props) => (
@@ -7,5 +6,7 @@ const addPerson = (props) => (
         <button onClick={props.personAdded}>Add Person</button>
     </div>
 );
+
+
 
 export default addPerson;
